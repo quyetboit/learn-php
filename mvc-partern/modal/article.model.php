@@ -1,7 +1,5 @@
 <?php
     include './env/connect.php';
-    
-    $ma = $_GET['ma'];
 
     $sql = "SELECT * FROM article WHERE ma = $ma";
 

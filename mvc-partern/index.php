@@ -7,13 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    Trang chủ
     <?php
-        include './controller/menu.controller.php';
-
-        if (isset($_GET['ma'])) {
-            include './controller/article.controller.php';
-        }
+        include './controller/controller.php';
     ?>
 </body>
 </html>

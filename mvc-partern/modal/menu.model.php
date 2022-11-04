@@ -6,6 +6,4 @@
 
     if ($listMenu->num_rows === 0) {
         die('No item menu');
-    } else {
-        echo 'Has data';
     }

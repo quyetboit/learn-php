@@ -37,4 +37,4 @@
             if ($conn->query($sql) !== true) {
                 die ('Has error: ' . $conn->error);
             }
-    } 
+    }

@@ -34,4 +34,32 @@
             }
             return $arr;
         }
+
+        public function get_by_id($id) {
+            $connect = new Connect();
+            $sql = "select * from lop where id = $id";
+            $result = $connect->select($sql)->fetch_assoc();
+            $lop = new self();
+            $lop->set_ma($result['id']);
+            $lop->set_ten($result['ten']);
+            return $lop;
+        }
+
+        public function store() {
+            $connect = new Connect();
+            $sql = "insert into lop(ten) values('$this->ten')";
+            $connect->execute($sql);
+        }
+
+        public function update() {
+            $connect = new Connect();
+            $sql = "update lop set ten = '$this->ten' where id = $this->ma";
+            $connect->execute($sql);
+        }
+
+        public function delete() {
+            $connect = new Connect();
+            $sql = "delete from lop where id = $this->ma";
+            $connect->execute($sql); 
+        }
     }

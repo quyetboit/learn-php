@@ -10,9 +10,9 @@
             <td><?=$row->get_ma()?></td>
             <td><?=$row->get_ten()?></td>
             <td>
-                <a href="?action=edit">Sửa</a>
+                <a href="?action=edit&ma=<?=$row->get_ma()?>">Sửa</a>
                 <span> | </span>
-                <a href="?ation=delete">Xoá</a>
+                <a href="?action=delete&ma=<?=$row->get_ma()?>">Xoá</a>
             </td>
         </tr>
     <?php endforeach ?>

@@ -21,5 +21,6 @@
         public function execute($sql): void {
             $conn = $this->connect();
             $conn->query($sql);
+            $conn->close();
         }
     }

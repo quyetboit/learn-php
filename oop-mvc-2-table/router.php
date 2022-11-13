@@ -18,6 +18,33 @@
                     $lops = $lopController->get_all();
                     require './view/lop/index.php';
                     break;
+                case 'create':
+                    require './controller/LopController.php';
+                    $lopController = new LopController();
+                    $lopController->create();
+                    break;
+                case 'store':
+                    require './controller/LopController.php';
+                    $lopController = new LopController();
+                    $lopController->store();
+                    break;
+                case 'edit':
+                    require './controller/LopController.php';
+                    $lopController = new LopController();
+                    $lopController->edit();
+                    break;
+                case 'update':
+                    require './controller/LopController.php';
+                    $lopController = new LopController();
+                    $lopController->update();
+                    break;
+                case 'delete':
+                    require './controller/LopController.php';
+                    $lopController = new LopController();
+                    $lopController->delete();
+                    break;
+                default:
+                    echo "Action không hợp lệ";
             }
 
             break;
